@@ -7,6 +7,7 @@ import Register from "./components/Register.jsx";
 import Kanban from "./components/Kanban.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import ProtectedRoutes from "./utils/ProtectedRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,13 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "/kanban",
-    element: <Kanban />,
+    element: <ProtectedRoutes />,
+    children: [
+      {
+        path: "/kanban",
+        element: <Kanban />,
+      },
+    ],
   },
 ]);
 

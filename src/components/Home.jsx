@@ -11,7 +11,7 @@ function Home() {
   const [users, setUsers] = useState([]);
   const columns = useSelector((state) => state.columns);
   useEffect(() => {
-    if (tasks.length == 0) {
+    if (!tasks.length) {
       api.get("/task").then((res) => {
           let tasks = res.data;
           setTasks(tasks);
@@ -39,7 +39,7 @@ function Home() {
           console.log("err: ", err);
         });
     }
-  }, [tasks]);
+  }, []);
 
   return (
     <div

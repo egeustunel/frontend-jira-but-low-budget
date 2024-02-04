@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import columnsSlice from "../redux/columnsSlice";
 import api from "../utils/api";
 import Datepicker from "react-tailwindcss-datepicker";
+import { useNavigate } from "react-router-dom";
 
 function AddEditTaskModal({
   type,
@@ -13,6 +14,7 @@ function AddEditTaskModal({
   prevColIndex = 0,
 }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isFirstLoad, setIsFirstLoad] = useState(true);
   const [isValid, setIsValid] = useState(true);
   const [title, setTitle] = useState("");
@@ -81,6 +83,7 @@ function AddEditTaskModal({
               newColIndex,
             })
           );
+          navigate(0);
         })
         .catch((err) => {
           console.log("err: ", err);

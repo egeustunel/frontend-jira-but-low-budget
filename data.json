@@ -1,0 +1,34 @@
+{
+  "columns": [
+    {
+      "id": 1,
+      "name": "Pending",
+      "tasks": []
+    },
+    {
+      "id": 2,
+      "name": "ReOpened",
+      "tasks": []
+    },
+    {
+      "id": 3,
+      "name": "InProgress",
+      "tasks": []
+    },
+    {
+      "id": 4,
+      "name": "CodeReview",
+      "tasks": []
+    },
+    {
+      "id": 5,
+      "name": "Test",
+      "tasks": []
+    },
+    {
+      "id": 6,
+      "name": "Done",
+      "tasks": []
+    }
+  ]
+}
